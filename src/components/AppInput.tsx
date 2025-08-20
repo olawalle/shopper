@@ -2,21 +2,21 @@ import clsx from "clsx";
 import React, { JSX } from "react";
 
 interface CustomInputProps {
-  prefix?: JSX.Element;
-  suffix?: JSX.Element;
+  prefixElement?: JSX.Element;
+  suffixElement?: JSX.Element;
   className?: string;
   inputClass?: string;
 }
 
 const AppInput: React.FC<
   CustomInputProps & React.InputHTMLAttributes<HTMLInputElement>
-> = ({ prefix, suffix, className, inputClass, ...props }) => {
+> = ({ prefixElement, suffixElement, className, inputClass, ...props }) => {
   return (
     <div
       className={`flex items-center h-[45px] relative overflow-hidden ${className}`}
     >
-      {prefix && (
-        <div className="absolute top-0 left-0 z-10 h-full">{prefix}</div>
+      {prefixElement && (
+        <div className="absolute top-0 left-0 z-10 h-full">{prefixElement}</div>
       )}
       <input
         className={clsx(
@@ -24,8 +24,10 @@ const AppInput: React.FC<
         )}
         {...props}
       />
-      {suffix && (
-        <div className="absolute top-0 right-0 z-10 h-full">{suffix}</div>
+      {suffixElement && (
+        <div className="absolute top-0 right-0 z-10 h-full">
+          {suffixElement}
+        </div>
       )}
     </div>
   );

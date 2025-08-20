@@ -73,12 +73,12 @@ function Nav() {
         <div className="w-[500px] mx-8">
           <AppInput
             inputClass="!pl-[40px]"
-            prefix={
+            prefixElement={
               <div className="flex items-center justify-center px-2 h-full">
                 <Search color="#666666" />
               </div>
             }
-            suffix={
+            suffixElement={
               <button className="bg-success text-white h-full px-6 rounded-r-[8px]">
                 Search
               </button>
