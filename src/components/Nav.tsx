@@ -15,10 +15,11 @@ function Nav() {
     "About Us",
     "Contact Us",
   ];
+
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="border-b border-gray-200">
-        <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4">
+        <div className="container mx-auto flex items-center justify-between py-4">
           <div className="flex text-light gap-2">
             <Image
               src="/assets/location.svg"
@@ -60,7 +61,8 @@ function Nav() {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4">
+
+      <div className="container mx-auto flex items-center justify-between py-4">
         <div className="flex items-center gap-2">
           <Image
             src="/assets/logo.svg"
@@ -119,12 +121,12 @@ function Nav() {
       </div>
 
       <div className="bg-[#333333] h-[60px]">
-        <div className="max-w-7xl mx-auto h-full flex items-center justify-between">
+        <div className="container mx-auto h-full flex items-center justify-between">
           <div className="flex items-center h-full">
             {submenuItems.map((item) => (
               <div
                 key={item}
-                className="text-white px-4 py-2 hover:bg-[#444444] flex items-center text-[14px] gap-1"
+                className="text-white mr-4 py-2 hover:bg-[#444444] flex items-center text-[14px] gap-1"
               >
                 {item} <ChevronDown size={14} />
               </div>

@@ -29,7 +29,7 @@ export function AppSelect({
     <Select onValueChange={onChange} value={value} defaultValue={value}>
       <div className="w-full h-full">
         <SelectTrigger
-          className={`w-full border-gray-200 min-w-0 rounded-md border ${className}`}
+          className={`w-full border-gray-200 min-w-0 rounded-[6px] border ${className}`}
         >
           <SelectValue placeholder={placeholder} />
         </SelectTrigger>
