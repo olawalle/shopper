@@ -17,7 +17,7 @@ function Nav() {
   ];
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white shadow-sm sticky top-0 z-50 hidden md:block">
       <div className="border-b border-gray-200">
         <div className="container mx-auto flex items-center justify-between py-4">
           <div className="flex text-light gap-2">

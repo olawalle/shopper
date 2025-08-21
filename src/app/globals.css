@@ -145,3 +145,10 @@ button {
 .social-btn:hover svg path {
   fill: #ffffff;
 }
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100% !important;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

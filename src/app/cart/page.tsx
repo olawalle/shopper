@@ -22,7 +22,7 @@ function CartPage() {
   ];
   return (
     <div className="bg-[#ffffff]">
-      <div className="flex flex-col md:flex-row items-center justify-between text-white relative h-[120px] overflow-hidden">
+      <div className="flex flex-row items-center justify-between text-white relative h-[120px] overflow-hidden">
         <Image
           src="/assets/banners/banner-7.jpg"
           alt="Banner"
@@ -40,13 +40,13 @@ function CartPage() {
       </div>
 
       <div className="container mx-auto mt-[60px]">
-        <h3 className="text-[32px] font-semibold text-center">
+        <h3 className="text-[24px] md:text-[32px] font-semibold text-center">
           My Shopping Cart
         </h3>
-        <div className="mt-6 flex gap-6">
-          <div className="w-2/3">
+        <div className="mt-6 md:flex gap-6">
+          <div className="w-full md:w-2/3">
             <div className="border border-gray-200 rounded-[8px]">
-              <div className="px-4 border-b border-gray-200 text-gray-500 uppercase py-3 flex">
+              <div className="px-4 border-b border-gray-200 text-gray-500 uppercase py-3 hidden md:flex">
                 <div className="w-[40%] flex items-center">
                   <p>Product</p>
                 </div>
@@ -61,12 +61,15 @@ function CartPage() {
               <div className="px-4">
                 {cartItems.map((item, i) => (
                   <div
-                    className={clsx("px-2 h-[100px] flex", {
-                      "border-b border-gray-200": i < cartItems.length - 1,
-                    })}
+                    className={clsx(
+                      "px-2 md:h-[100px] flex flex-col md:flex-row gap-4 md:gap-0 pb-6 md:pb-0",
+                      {
+                        "border-b border-gray-200": i < cartItems.length - 1,
+                      }
+                    )}
                     key={i}
                   >
-                    <div className="w-[40%] flex items-center">
+                    <div className="w-full md:w-[40%] flex md:flex-row flex-col md:items-center">
                       <Image
                         src={item.product}
                         width={100}
@@ -75,10 +78,10 @@ function CartPage() {
                       />
                       <p className="ml-2">{item.name}</p>
                     </div>
-                    <div className="w-[15%] flex items-center h-full">
+                    <div className="w-full md:w-[15%] flex items-center h-full">
                       <p>${item.price.toFixed(2)}</p>
                     </div>
-                    <div className="w-[25%] flex items-center h-full">
+                    <div className="w-full md:w-[25%] flex items-center h-full">
                       <div className="border border-gray-200 rounded-full flex justify-between h-[50px] p-[8px] min-w-[150px]">
                         <button className="h-[32px] w-[32px] rounded-full flex items-center justify-center bg-[#F2F2F2]">
                           <Minus size={16} />
@@ -91,7 +94,7 @@ function CartPage() {
                         </button>
                       </div>
                     </div>
-                    <div className="w-[20%] flex justify-between items-center pr-4">
+                    <div className="w-full md:w-[20%] flex justify-between items-center pr-4">
                       <p className="font-medium">
                         ${Number(item.price) * Number(item.quantity)}
                       </p>
@@ -103,7 +106,7 @@ function CartPage() {
                 ))}
               </div>
 
-              <div className="flex justify-between border-t border-gray-200 p-4">
+              <div className="flex flex-col md:flex-row gap-2 md:gap-0 justify-between border-t border-gray-200 p-4">
                 <button className="px-6 font-medium h-[45px] bg-[#F2F2F2] text-[#4D4D4D] rounded-full">
                   Return to shop
                 </button>
@@ -112,8 +115,8 @@ function CartPage() {
                 </button>
               </div>
             </div>
-            <div className="border border-gray-200 rounded-[8px] mt-4 flex justify-between items-center p-4 gap-4">
-              <h4 className="w-[200px]">Coupon Code</h4>
+            <div className="border border-gray-200 rounded-[8px] mt-4 md:flex justify-between items-center p-4 gap-4">
+              <h4 className="w-[200px] mb-2 md:mb-0">Coupon Code</h4>
               <AppInput
                 className="rounded-full bg-white w-full overflow-hidden"
                 inputClass="rounded-full"
@@ -126,7 +129,7 @@ function CartPage() {
               />
             </div>
           </div>
-          <div className="w-1/3 border border-gray-200 rounded-[8px] p-4 h-fit">
+          <div className="w-full md:w-1/3 mt-4 md:mt-0 border border-gray-200 rounded-[8px] p-4 h-fit">
             <h4 className="font-medium text-[20px]">Cart Total</h4>
 
             <div className="flex items-center justify-between py-2 mt-[20px]">

@@ -8,7 +8,7 @@ function FeaturedProducts() {
   return (
     <section className="container mx-auto mt-12">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-[32px] text-[#1A1A1A] font-semibold">
+        <h3 className="text-[20px] md:text-[32px] text-[#1A1A1A] font-semibold">
           Featured Products
         </h3>
         <Link href="/listing" className="text-success font-medium flex">

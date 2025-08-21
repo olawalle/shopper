@@ -44,7 +44,7 @@ function Product({
             alt={product.name}
             width={80}
             height={80}
-            className="w-[90%] object-contain"
+            className="w-[60%] md:w-[90%] object-contain"
           />
         </div>
         <div className="flex justify-between w-full p-4">

@@ -22,7 +22,7 @@ function PopularCategories() {
   return (
     <section className="container mx-auto mt-12">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-[32px] text-[#1A1A1A] font-semibold">
+        <h3 className="text-[20px] md:text-[32px] text-[#1A1A1A] font-semibold">
           Popular Categories
         </h3>
         <Link href="/listing" className="text-success font-medium flex">
@@ -44,7 +44,7 @@ function PopularCategories() {
                 className="object-cover"
               />
             </div>
-            <span className="text-[18px] group-hover:text-[#2C742F] font-medium text-gray-700">
+            <span className="text-[14px] md:text-[18px] group-hover:text-[#2C742F] font-medium text-gray-700 text-center">
               {cat.name}
             </span>
           </div>

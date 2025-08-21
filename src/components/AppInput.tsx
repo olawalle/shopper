@@ -7,6 +7,7 @@ interface CustomInputProps {
   className?: string;
   inputClass?: string;
   label?: string;
+  error?: string;
 }
 
 const AppInput: React.FC<
@@ -17,6 +18,7 @@ const AppInput: React.FC<
   className,
   inputClass,
   label,
+  error,
   ...props
 }) => {
   return (
@@ -42,6 +44,7 @@ const AppInput: React.FC<
           </div>
         )}
       </div>
+      {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
     </div>
   );
 };

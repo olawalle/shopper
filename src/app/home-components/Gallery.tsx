@@ -14,7 +14,7 @@ function Gallery() {
   ];
   return (
     <section className="container mx-auto mt-12">
-      <div className="grid grid-cols-6 mb-12">
+      <div className="grid grid-cols-2 md:grid-cols-6 mb-12">
         {brands.map((brand, i) => (
           <div
             className={clsx(
@@ -34,10 +34,10 @@ function Gallery() {
           </div>
         ))}
       </div>
-      <h3 className="text-[32px] text-center font-semibold mb-4">
+      <h3 className="text-[24px] md:text-[32px] text-center font-semibold mb-4">
         Follow us on Instagram
       </h3>
-      <div className="grid grid-cols-6 gap-4 pb-2">
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-4 pb-2">
         {[
           "/assets/banners/banner-8.jpg",
           "/assets/banners/banner-8.jpg",
