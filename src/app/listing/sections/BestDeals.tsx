@@ -5,7 +5,7 @@ import React from "react";
 function BestDeals() {
   return (
     <section className="container mx-auto h-[350px] overflow-hidden rounded-[16px]">
-      <div className=" rounded-xl flex flex-col md:flex-row items-center justify-between text-white relative min-h-[180px]">
+      <div className="rounded-xl flex flex-col md:flex-row items-center justify-between text-white relative min-h-[180px]">
         <Image
           src="/assets/banners/banner-7.jpg"
           alt="Banner"

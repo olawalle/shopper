@@ -64,13 +64,15 @@ function Nav() {
 
       <div className="container mx-auto flex items-center justify-between py-4">
         <div className="flex items-center gap-2">
-          <Image
-            src="/assets/logo.svg"
-            alt="Logo"
-            width={200}
-            height={200}
-            className="h-[40px]"
-          />
+          <Link href="/">
+            <Image
+              src="/assets/logo.svg"
+              alt="Logo"
+              width={200}
+              height={200}
+              className="h-[40px]"
+            />
+          </Link>
         </div>
         <div className="w-[500px] mx-8">
           <AppInput
@@ -99,7 +101,7 @@ function Nav() {
             />
           </button>
           <div className="border-l border-gray-200 h-[20px]" />
-          <button className="p-2 flex items-center gap-2">
+          <Link href="/cart" className="p-2 flex items-center gap-2">
             <div className="relative">
               <Image
                 src="/assets/bag.svg"
@@ -116,7 +118,7 @@ function Nav() {
               <p className="text-gray-700 text-[11px]">Shopping cart:</p>
               <p className="text-[#1A1A1A] font-medium">$57.00</p>
             </div>
-          </button>
+          </Link>
         </div>
       </div>
 
