@@ -1,3 +1,4 @@
+import AppButton from "@/components/AppButton";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -21,9 +22,9 @@ function Hero() {
               Free shipping on all your order.
             </p>
           </div>
-          <button className="bg-white text-success font-medium px-4 md:px-6 py-2 rounded-full w-fit flex gap-2 text-sm md:text-base">
+          <AppButton variant="white" className="w-fit gap-2">
             Shop now <ArrowRight />
-          </button>
+          </AppButton>
         </div>
         <Image
           src="/assets/banners/banner-1.jpg"
@@ -44,9 +45,9 @@ function Hero() {
               Only Fruit & Vegetable
             </p>
 
-            <button className="text-success font-medium mt-4 w-fit flex gap-2 text-sm md:text-base">
+            <AppButton variant="white" className="w-fit gap-2">
               Shop Now <ArrowRight />
-            </button>
+            </AppButton>
           </div>
           <Image
             src="/assets/banners/banner-2.jpg"
@@ -65,9 +66,9 @@ function Hero() {
             <span className="text-[16px] md:text-[32px] font-semibold max-w-[180px] md:max-w-[300px] text-center">
               Special Products Deal of the Month
             </span>
-            <button className="text-success font-medium mt-4 w-fit flex gap-2 text-sm md:text-base">
+            <AppButton variant="white" className="w-fit gap-2">
               Shop Now <ArrowRight />
-            </button>
+            </AppButton>
           </div>
           <Image
             src="/assets/banners/banner-3.jpg"

@@ -10,9 +10,10 @@ import { AppSelect } from "@/components/AppSelect";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { BillingFormValues } from "../page";
+import { COUNTRIES, STATES } from "@/constants";
 
 const BillingForm: React.FC<{
-  onSubmit: any;
+  onSubmit: (data: BillingFormValues) => void;
   register: UseFormRegister<BillingFormValues>;
   errors: FieldErrors<BillingFormValues>;
   setValue: UseFormSetValue<BillingFormValues>;
@@ -55,6 +56,10 @@ const BillingForm: React.FC<{
           className="w-full"
           onChange={(value) => setValue("country", value)}
           error={errors.country?.message}
+          options={COUNTRIES.map((country) => ({
+            value: country,
+            label: country,
+          }))}
         />
         <AppSelect
           label="State"
@@ -62,6 +67,10 @@ const BillingForm: React.FC<{
           className="w-full"
           onChange={(value) => setValue("state", value)}
           error={errors.state?.message}
+          options={STATES.map((state) => ({
+            value: state,
+            label: state,
+          }))}
         />
         <AppInput
           label="Zip Code"
@@ -95,7 +104,17 @@ const BillingForm: React.FC<{
           </Label>
         </div>
       </div>
-      <button type="submit" />
+
+      <div className="border-t border-gray-200 pt-4 mt-6">
+        <h4 className="text-[20px] font-medium pt-4 mb-4">
+          Billing Information
+        </h4>
+        <AppInput
+          textarea
+          label="Order Notes (Optional)"
+          placeholder="Notes about your order, e.g. special notes for delivery"
+        />
+      </div>
     </div>
   );
 };

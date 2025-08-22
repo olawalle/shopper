@@ -1,3 +1,4 @@
+import { IProduct } from "@/types/product.types";
 import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
@@ -7,7 +8,7 @@ function Product({
   small = true,
   bordered = false,
 }: {
-  product: any;
+  product: IProduct;
   small?: boolean;
   bordered?: boolean;
 }) {

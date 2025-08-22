@@ -1,3 +1,4 @@
+import AppButton from "@/components/AppButton";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -24,9 +25,9 @@ function SummerSale() {
             Free on all your order, Free Shipping and 30 days money-back
             guarantee
           </p>
-          <button className="bg-success text-[#ffffffc8] font-medium px-6 py-2 rounded-full w-max flex items-center">
+          <AppButton className="bg-success text-[#ffffffc8] font-medium px-6 py-2 rounded-full w-max flex items-center">
             Shop Now <ArrowRight className="ml-2" />
-          </button>
+          </AppButton>
         </div>
       </div>
     </section>

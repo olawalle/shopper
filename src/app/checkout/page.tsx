@@ -5,6 +5,9 @@ import React from "react";
 import BillingForm from "./sections/BillingForm";
 import OrderSummary from "./sections/OrderSummary";
 import { useForm } from "react-hook-form";
+import BreadCrumbs from "@/components/BreadCrumbs";
+import AppButton from "@/components/AppButton";
+import { iCart } from "@/types/product.types";
 
 export interface BillingFormValues {
   firstName: string;
@@ -39,7 +42,7 @@ function CheckoutPage() {
       shipToDifferent: false,
     },
   });
-  const cartItems = [
+  const cartItems: iCart[] = [
     {
       product: "/assets/products/p-2.jpg",
       price: 14.0,
@@ -54,7 +57,7 @@ function CheckoutPage() {
     },
   ];
 
-  const handleFormSubmit = (data: any) => {
+  const handleFormSubmit = (data: BillingFormValues) => {
     alert("Order placed!" + JSON.stringify(data));
   };
 
@@ -69,13 +72,12 @@ function CheckoutPage() {
           className="w-full object-cover mt-4 md:mt-0 absolute right-0 z-[1] rotate-180"
         />
         <div className="absolute left-0 w-full z-[2]">
-          <div className="flex items-center py-5 text-gray-400 h-full container mx-auto">
-            <img src="/assets/home.svg" alt="Home" />
-            <ChevronRight className="mx-2" size={18} />
-            <p>Shopping Cart</p>
-            <ChevronRight />
-            <span className="text-success">Shopping cart</span>
-          </div>
+          <BreadCrumbs
+            crumbs={[
+              { title: "Shopping cart", url: "/cart" },
+              { title: "Checkout", url: "/checkout" },
+            ]}
+          />
         </div>
       </div>
       <form
@@ -86,19 +88,16 @@ function CheckoutPage() {
           <div className="w-full md:w-2/3">
             <h4 className="text-[20px] font-medium">Billing Information</h4>
             <BillingForm
-              onSubmit={handleSubmit(handleFormSubmit)}
+              onSubmit={handleFormSubmit}
               register={register}
               errors={errors}
               setValue={setValue}
             />
           </div>
           <OrderSummary cartItems={cartItems}>
-            <button
-              className="bg-success text-white w-full rounded-full mt-6 h-[50px]"
-              type="submit"
-            >
+            <AppButton type="submit" className="w-full mt-6">
               Proceed to checkout
-            </button>
+            </AppButton>
           </OrderSummary>
         </div>
       </form>

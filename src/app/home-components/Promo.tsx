@@ -1,3 +1,4 @@
+import AppButton from "@/components/AppButton";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -38,9 +39,9 @@ function Promo() {
               <p className="text-[#FFFFFFCC] text-[12px]">SEC</p>
             </div>
           </div>
-          <button className="bg-white text-success px-6 py-2 rounded-full w-fit flex gap-2 mt-4">
+          <AppButton variant="white" className="w-fit gap-2 mt-4">
             Shop now <ArrowRight />
-          </button>
+          </AppButton>
         </div>
         <Image
           src="/assets/banners/banner-4.jpg"
@@ -60,9 +61,9 @@ function Promo() {
               Started at <div className="text-warning">$79.99</div>
             </p>
           </div>
-          <button className="bg-white text-success px-6 py-2 rounded-full w-fit flex gap-2 mt-4">
+          <AppButton variant="white" className="w-fit gap-2 mt-4">
             Shop now <ArrowRight />
-          </button>
+          </AppButton>
         </div>
         <Image
           src="/assets/banners/banner-5.jpg"
@@ -85,9 +86,9 @@ function Promo() {
               </div>
             </p>
           </div>
-          <button className="bg-white text-success px-6 py-2 rounded-full w-fit flex gap-2 mt-4">
+          <AppButton variant="white" className="w-fit gap-2 mt-4">
             Shop now <ArrowRight />
-          </button>
+          </AppButton>
         </div>
         <Image
           src="/assets/banners/banner-6.jpg"

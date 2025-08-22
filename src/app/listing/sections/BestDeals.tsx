@@ -1,3 +1,4 @@
+import AppButton from "@/components/AppButton";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -48,9 +49,9 @@ function BestDeals() {
               <p className="text-[#FFFFFFCC] text-[12px]">SEC</p>
             </div>
           </div>
-          <button className="bg-success text-[#ffffffc8] font-medium px-6 py-2 rounded-full w-max flex items-center mt-4">
+          <AppButton className="bg-success text-[#ffffffc8] font-medium px-6 py-2 rounded-full w-max flex items-center mt-4">
             Shop Now <ArrowRight className="ml-2" />
-          </button>
+          </AppButton>
         </div>
       </div>
     </section>

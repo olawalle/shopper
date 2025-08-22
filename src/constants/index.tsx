@@ -1,4 +1,6 @@
-export const PRODUCTS = [
+import { IProduct } from "@/types/product.types";
+
+export const PRODUCTS: IProduct[] = [
   {
     name: "Green Apple",
     img: "/assets/products/p-5.jpg",
@@ -60,3 +62,6 @@ export const PRODUCTS = [
     oldPrice: 10,
   },
 ];
+
+export const COUNTRIES = ["Nigeria", "USA", "Canada", "UK", "Australia"];
+export const STATES = ["Lagos", "Abuja", "Port Harcourt", "Ibadan", "Kaduna"];

@@ -1,8 +1,10 @@
 import { Eye } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import AppButton from "./AppButton";
+import { IProduct } from "@/types/product.types";
 
-function SpecialProduct({ product }: { product: any }) {
+function SpecialProduct({ product }: { product: IProduct }) {
   return (
     <div className="bg-white flex flex-col items-center gap-2 transition h-[561px]">
       <div className="h-[294px] w-full flex items-center justify-center overflow-hidden">
@@ -19,9 +21,7 @@ function SpecialProduct({ product }: { product: any }) {
           <img src="/assets/fav.svg" alt="" className="w-[18px]" />
         </button>
 
-        <button className="w-full bg-success text-white rounded-full h-[46px] flex-1">
-          Add to Cart
-        </button>
+        <AppButton className="w-full">Add to Cart</AppButton>
 
         <button className="w-[46px] h-[46px] bg-[#F2F2F2] rounded-full flex items-center justify-center">
           <Eye size={18} />

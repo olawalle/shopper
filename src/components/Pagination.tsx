@@ -1,17 +1,17 @@
-"use client";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 type PaginationProps = {
   totalPages: number;
   currentPage: number;
-  onPageChange: (page: number) => void;
+  basePath?: string;
 };
 
 const Pagination: React.FC<PaginationProps> = ({
   totalPages,
   currentPage,
-  onPageChange,
+  basePath = "",
 }) => {
   if (totalPages <= 1) return null;
 
@@ -29,40 +29,46 @@ const Pagination: React.FC<PaginationProps> = ({
     }
   }
 
+  const getPageHref = (page: number) => `${basePath}?page=${page}`;
+
   return (
     <div className="flex gap-2 justify-center mt-6">
-      <button
-        onClick={() => currentPage >= 1 && onPageChange(currentPage - 1)}
+      <Link
+        href={getPageHref(Math.max(1, currentPage - 1))}
         className="rounded-full w-[30px] h-[30px] border border-gray-200 flex items-center justify-center"
+        aria-disabled={currentPage === 1}
+        tabIndex={currentPage === 1 ? -1 : 0}
       >
         <ChevronLeft size={18} />
-      </button>
+      </Link>
       {pages.map((page, idx) =>
         page === "..." ? (
           <span key={"ellipsis-" + idx} className="px-3 py-1 text-gray-400">
             ...
           </span>
         ) : (
-          <button
+          <Link
             key={page}
-            className={`rounded-full w-[30px] h-[30px] ${
+            href={getPageHref(page as number)}
+            className={`rounded-full w-[30px] h-[30px] flex items-center justify-center ${
               currentPage === page
-                ? "bg-success text-white"
+                ? "bg-success text-white pointer-events-none"
                 : "bg-white text-gray-700 hover:bg-success hover:text-white"
             }`}
-            onClick={() => typeof page === "number" && onPageChange(page)}
-            disabled={currentPage === page}
+            aria-current={currentPage === page ? "page" : undefined}
           >
             {page}
-          </button>
+          </Link>
         )
       )}
-      <button
-        onClick={() => onPageChange(currentPage + 1)}
+      <Link
+        href={getPageHref(Math.min(totalPages, currentPage + 1))}
         className="rounded-full w-[30px] h-[30px] border border-gray-200 flex items-center justify-center"
+        aria-disabled={currentPage === totalPages}
+        tabIndex={currentPage === totalPages ? -1 : 0}
       >
         <ChevronRight size={18} />
-      </button>
+      </Link>
     </div>
   );
 };

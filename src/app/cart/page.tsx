@@ -1,4 +1,6 @@
+import AppButton from "@/components/AppButton";
 import AppInput from "@/components/AppInput";
+import BreadCrumbs from "@/components/BreadCrumbs";
 import clsx from "clsx";
 import { ChevronRight, Minus, Plus, X } from "lucide-react";
 import Image from "next/image";
@@ -31,11 +33,7 @@ function CartPage() {
           className="w-full object-cover mt-4 md:mt-0 absolute right-0 z-[1] rotate-180"
         />
         <div className="absolute left-0 w-full z-[2]">
-          <div className="flex items-center py-5 text-gray-500 p-4 h-full container mx-auto">
-            <img src="/assets/home.svg" alt="Home" />{" "}
-            <ChevronRight className="mx-2" size={18} />
-            <span className="text-success">Shopping cart</span>
-          </div>
+          <BreadCrumbs crumbs={[{ title: "Shopping cart", url: "/cart" }]} />
         </div>
       </div>
 
@@ -107,12 +105,8 @@ function CartPage() {
               </div>
 
               <div className="flex flex-col md:flex-row gap-2 md:gap-0 justify-between border-t border-gray-200 p-4">
-                <button className="px-6 font-medium h-[45px] bg-[#F2F2F2] text-[#4D4D4D] rounded-full">
-                  Return to shop
-                </button>
-                <button className="px-6 font-medium h-[45px] bg-[#F2F2F2] text-[#4D4D4D] rounded-full">
-                  Update Cart
-                </button>
+                <AppButton variant="grey">Return to shop</AppButton>
+                <AppButton variant="grey">Update Cart</AppButton>
               </div>
             </div>
             <div className="border border-gray-200 rounded-[8px] mt-4 md:flex justify-between items-center p-4 gap-4">
@@ -122,9 +116,9 @@ function CartPage() {
                 inputClass="rounded-full"
                 placeholder="Enter code"
                 suffixElement={
-                  <button className="bg-gray-800 text-white px-6 h-full rounded-full font-medium">
+                  <AppButton className="!bg-gray-800 !text-white !h-full">
                     Apply Coupon
-                  </button>
+                  </AppButton>
                 }
               />
             </div>

@@ -1,3 +1,4 @@
+import { iCart } from "@/types/product.types";
 import Image from "next/image";
 import React from "react";
 
@@ -5,7 +6,7 @@ function OrderSummary({
   cartItems,
   children,
 }: {
-  cartItems: any[];
+  cartItems: iCart[];
   children: React.ReactNode;
 }) {
   return (

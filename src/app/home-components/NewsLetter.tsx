@@ -4,6 +4,7 @@ import Facebook from "../../../public/assets/facebook.svg";
 import X from "../../../public/assets/x.svg";
 import Pinterest from "../../../public/assets/pintrest.svg";
 import IG from "../../../public/assets/ig.svg";
+import AppButton from "@/components/AppButton";
 
 function NewsLetter() {
   const socials = [
@@ -32,9 +33,9 @@ function NewsLetter() {
               inputClass="rounded-full"
               placeholder="Your email address"
               suffixElement={
-                <button className="bg-success text-white px-6 h-full rounded-full font-medium">
+                <AppButton className="px-6 h-full font-medium">
                   Subscribe
-                </button>
+                </AppButton>
               }
             />
 
