@@ -65,3 +65,12 @@ export const PRODUCTS: IProduct[] = [
 
 export const COUNTRIES = ["Nigeria", "USA", "Canada", "UK", "Australia"];
 export const STATES = ["Lagos", "Abuja", "Port Harcourt", "Ibadan", "Kaduna"];
+
+export const SUBMENU_ITEMS = [
+  "Home",
+  "Shop",
+  "Pages",
+  "Blog",
+  "About Us",
+  "Contact Us",
+];

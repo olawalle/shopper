@@ -5,8 +5,14 @@ import React from "react";
 
 function Promo() {
   return (
-    <section className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-      <div className="relative rounded-2xl overflow-hidden h-[400px] md:h-[550px] bg-black">
+    <section
+      data-testid="best-deals"
+      className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-12"
+    >
+      <div
+        data-testid="best-deals-1"
+        className="promo-item relative rounded-2xl overflow-hidden h-[400px] md:h-[550px] bg-black"
+      >
         <div className="rounded-xl px-6 py-[40px] text-white flex flex-col items-center absolute top-0 left-0 w-full h-full z-[2]">
           <span className="leading-[3%] uppercase">Best Deals</span>
           <span className="font-semibold text-[24px] md:text-[40px] mt-4">
@@ -50,7 +56,10 @@ function Promo() {
           className="absolute top-0 z-[1] h-[550px]"
         />
       </div>
-      <div className="relative rounded-2xl overflow-hidden h-[400px] md:h-[550px] bg-black">
+      <div
+        data-testid="best-deals-2"
+        className="promo-item relative rounded-2xl overflow-hidden h-[400px] md:h-[550px] bg-black"
+      >
         <div className="rounded-xl px-6 py-[40px] text-white flex flex-col items-center absolute top-0 left-0 w-full h-full z-[2]">
           <span className="leading-[3%] uppercase">85% Fat Free</span>
           <span className="font-semibold text-[24px] md:text-[40px] mt-4">
@@ -72,7 +81,10 @@ function Promo() {
           className="absolute top-0 z-[1] h-[550px] mt-[100px]"
         />
       </div>
-      <div className="relative rounded-2xl overflow-hidden h-[400px] md:h-[550px] bg-[#FCC900]">
+      <div
+        data-testid="best-deals-3"
+        className="promo-item relative rounded-2xl overflow-hidden h-[400px] md:h-[550px] bg-[#FCC900]"
+      >
         <div className="rounded-xl px-6 py-[40px] text-black flex flex-col items-center absolute top-0 left-0 w-full h-full z-[2]">
           <span className="leading-[3%] uppercase">Best Deals</span>
           <span className="font-semibold text-[24px] md:text-[40px] mt-4">

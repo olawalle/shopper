@@ -6,7 +6,10 @@ import React from "react";
 function Hero() {
   return (
     <section className="container mx-auto flex flex-col md:flex-row flex-wrap md:flex-nowrap gap-6 mt-8 md:px-0 px-4 min-h-[600px]">
-      <div className="rounded-xl text-white overflow-hidden min-h-[320px] md:h-[600px] relative w-full md:w-2/3">
+      <div
+        data-testid="hero-banner-1"
+        className="rounded-xl text-white overflow-hidden min-h-[320px] md:h-[600px] relative w-full md:w-2/3"
+      >
         <div className="absolute top-0 left-0 w-full z-[2] h-full flex flex-col justify-center pl-4 md:pl-[40px] bg-gradient-to-r from-[#00000099] to-[#00000000]">
           <h2 className="text-[32px] md:text-[48px] leading-[36px] md:leading-[52px] mb-4 md:mb-6 font-semibold">
             Fresh & Healthy <span className="block"> Organic Food</span>
@@ -35,7 +38,10 @@ function Hero() {
         />
       </div>
       <div className="flex flex-col gap-4 w-full md:w-1/3 min-h-[320px]">
-        <div className="bg-white rounded-xl flex flex-col items-center justify-center h-[180px] md:h-[290px] shrink-0 relative overflow-hidden">
+        <div
+          data-testid="hero-banner-2"
+          className="bg-white rounded-xl flex flex-col items-center justify-center h-[180px] md:h-[290px] shrink-0 relative overflow-hidden"
+        >
           <div className="absolute top-0 left-0 w-full h-full pl-4 md:pl-[40px] pt-4 md:pt-[40px] flex flex-col rounded-xl z-[2]">
             <p className="text-[12px] md:text-[14px] font-medium tracking-[3%] uppercase">
               Summer Sale
@@ -58,7 +64,10 @@ function Hero() {
           />
         </div>
 
-        <div className="bg-white rounded-xl flex flex-col items-center justify-center h-[180px] md:h-[290px] shrink-0 relative overflow-hidden">
+        <div
+          data-testid="hero-banner-3"
+          className="bg-white rounded-xl flex flex-col items-center justify-center h-[180px] md:h-[290px] shrink-0 relative overflow-hidden"
+        >
           <div className="absolute top-0 left-0 w-full h-full bg-[#002603CC] flex flex-col items-center justify-center text-white rounded-xl z-[2] px-2 md:px-0">
             <span className="uppercase font-medium text-xs md:text-base">
               Best Deal

@@ -15,7 +15,7 @@ function Product({
   return (
     <div
       className={clsx(
-        "h-fit w-full transition-all duration-500 ease-in-out cursor-pointer",
+        "product-item h-fit w-full transition-all duration-500 ease-in-out cursor-pointer",
         {
           "hover:border-[#2C742F] group hover:shadow-md hover:shadow-[#20B52652] border border-gray-200 rounded-[6px] overflow-hidden":
             bordered,

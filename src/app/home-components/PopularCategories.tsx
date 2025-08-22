@@ -22,18 +22,24 @@ function PopularCategories() {
   return (
     <section className="container mx-auto mt-12">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-[20px] md:text-[32px] text-[#1A1A1A] font-semibold">
+        <h3
+          data-testid="popular-categories-title"
+          className="text-[20px] md:text-[32px] text-[#1A1A1A] font-semibold"
+        >
           Popular Categories
         </h3>
         <Link href="/listing" className="text-success font-medium flex">
           View all <ArrowRight className="ml-2" />
         </Link>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
+      <div
+        data-testid="popular-categories"
+        className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4"
+      >
         {categories.map((cat, i) => (
           <div
             key={i}
-            className="bg-white rounded-[5px] flex flex-col items-center p-4 gap-2 border border-gray-200 transition hover:border-[#2C742F] group hover:shadow-md hover:shadow-[#20B52652]"
+            className="bg-white rounded-[5px] flex flex-col items-center p-4 gap-2 border border-gray-200 transition hover:border-[#2C742F] group hover:shadow-md hover:shadow-[#20B52652] category-item"
           >
             <div className="h-[150px] flex items-center justify-center overflow-hidden">
               <Image

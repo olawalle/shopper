@@ -43,9 +43,15 @@ function Features() {
     },
   ];
   return (
-    <section className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 mt-8 px-4 bg-white light-shadow-2 rounded-[8px]">
+    <section
+      data-testid="features-section"
+      className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 mt-8 px-4 bg-white light-shadow-2 rounded-[8px]"
+    >
       {featurelist.map((feature, index) => (
-        <div className="flex items-center gap-2 rounded-lg p-4">
+        <div
+          className="flex items-center gap-2 rounded-lg p-4 feature-item"
+          key={index}
+        >
           {feature.icon}
           <div>
             <p className="text-[16px] font-semibold text-[#1A1A1A]">
